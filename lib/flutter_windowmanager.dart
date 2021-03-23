@@ -40,13 +40,13 @@ class FlutterWindowManager {
   static const MethodChannel _channel =
       const MethodChannel('flutter_windowmanager');
 
-  static Future<bool> addFlags(int flags) async {
+  static Future<bool?> addFlags(int flags) async {
     return await _channel.invokeMethod("addFlags", {
       "flags": flags,
     });
   }
 
-  static Future<bool> clearFlags(int flags) async {
+  static Future<bool?> clearFlags(int flags) async {
     return await _channel.invokeMethod("clearFlags", {
       "flags": flags,
     });
